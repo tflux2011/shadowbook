@@ -1,4 +1,4 @@
-// import { GET_USER_TOKEN } from "../browser-db-config/localStorage";
+import { GET_USER_TOKEN } from "../browser-db-config/localStorage";
 import { HTTP_CLIENT } from "./axios-config";
 
 function HTTP_REQUEST(httpRequestData) {
@@ -21,7 +21,7 @@ function HTTP_REQUEST(httpRequestData) {
 function setAuthHeader(file) {
   return {
     headers: {
-    //   Authorization: `Bearer ${GET_USER_TOKEN()}`,
+      "x-auth-token": `${GET_USER_TOKEN()}`,
       fileUploadheader: file ? { "Content-Type": "multipart/form-data" } : {},
       "Content-Type": "application/json",
     },

@@ -17,7 +17,7 @@ function GET_LOCAL_DB_DATA(storageName, deleteData = false) {
 
 function GET_USER_TOKEN() {
 	let userData = GET_LOCAL_DB_DATA('shadow-book-user-data');
-	return userData ? userData.token : null;
+	return userData ? userData : null;
 }
 
 function GET_USER_DATA() {

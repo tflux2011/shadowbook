@@ -31,7 +31,7 @@
 
         <p class="mb-0 mt-3">Enter Content</p>
         <editor
-          api-key="oap0fionueus457skqwzc7bnvkzkxae0p270akfs4fre1trr"
+          :api-key="process.env.VUE_APP_TINY_MCE"
           :init="{
             height: 400,
             menubar: false,
